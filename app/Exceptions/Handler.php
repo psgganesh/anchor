@@ -34,6 +34,15 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
+        if ($exception instanceof \Illuminate\Database\Eloquent\ModelNotFoundException) {
+            
+            $payload['error'] = [
+                'message' => 'This resource was not found in the database!'
+            ];
+    
+            return response()->json($payload, 404);
+        }
+        
         parent::report($exception);
     }
 
