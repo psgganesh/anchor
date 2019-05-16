@@ -1,5 +1,6 @@
 <p align="center">
-    ![Anchor](https://github.com/psgganesh/anchor/blob/master/public/anchor.png?raw=true)
+    <img src="https://github.com/psgganesh/anchor/blob/master/public/anchor-90.png?raw=true" />
+    <h2 align="center">Anchor</h2>
 </p>
 
 This package will help you create an API back-end application built with laravel v 5.8 and popular community packages as a base. 
