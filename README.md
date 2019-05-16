@@ -1,6 +1,5 @@
 <p align="center">
-    <a href="https://github.com/psgganesh/anchor"><img width="130" src="https://raw.githubusercontent.com/psgganesh/anchor/master/public/anchor.png
-"></a>
+    ![Anchor](https://github.com/psgganesh/anchor/blob/master/public/anchor.png?raw=true)
 </p>
 
 This package will help you create an API back-end application built with laravel v 5.8 and popular community packages as a base. 
@@ -18,7 +17,7 @@ Popular community packages used so far are
 - [owen-it/laravel-auditing](https://github.com/owen-it/laravel-auditing)
 - [spatie/laravel-cors](https://github.com/spatie/laravel-cors)
 - [spatie/laravel-fractal](https://github.com/spatie/laravel-fractal)
-- [spatie/laravel-permission](https://github.com/spatie/laravel-permission)"
+- [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
 - [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 - [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server)
 
