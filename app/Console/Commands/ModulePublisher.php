@@ -3,10 +3,45 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use File;
+use Illuminate\Filesystem\Filesystem;
 
 class ModulePublisher extends Command
 {
+    /**
+     * The module name.
+     *
+     * @var string
+     */
+    protected $module;
+    
+    /**
+     * The file system object.
+     *
+     * @var object
+     */
+    protected $fileSystem;
+    
+    /**
+     * The module's migration directory.
+     *
+     * @var string
+     */
+    protected $moduleMigrationsDirectory;
+
+    /**
+     * The module's seeds directory.
+     *
+     * @var string
+     */
+    protected $moduleSeedsDirectory;
+
+    /**
+     * The module's config directory.
+     *
+     * @var string
+     */
+    protected $moduleConfigrationDirectory;
+
     /**
      * The name and signature of the console command.
      *
@@ -37,19 +72,96 @@ class ModulePublisher extends Command
      */
     public function handle()
     {
+        
         $module = $this->argument('name');
 
         $module = ucfirst(strtolower($module));
+        
+        $this->module = $module;
+        $this->fileSystem = new Filesystem();
+        
+        $this->setPaths($module);
 
-        File::makeDirectory(app_path('Modules/'.$module));
-        File::makeDirectory(app_path('Modules/'.$module.'/Repositories/'));
-        File::makeDirectory(app_path('Modules/'.$module.'/Models/'));
-        File::makeDirectory(app_path('Modules/'.$module.'/Requests/'));
-        File::makeDirectory(app_path('Modules/'.$module.'/Transformers/'));
-        File::makeDirectory(app_path('Modules/'.$module.'/Migrations/'));
-        File::makeDirectory(app_path('Modules/'.$module.'/Seeders/'));
-        File::makeDirectory(app_path('Modules/'.$module.'/Configurations/'));
+        $this->publishMigrations();
 
-        $this->info("New module {$module} created.");
+        $this->publishSeeders();
+
+        $this->publishConfigurationFiles();
+
+        $this->info("Files of {$this->module} module published.");
     }
+
+    /**
+     * Sets default module folder paths
+     * 
+     * @return void
+     */
+    public function setPaths()
+    {
+        $this->moduleSeedsDirectory = app_path('Modules/'.$this->module.'/Seeders');
+        $this->moduleMigrationsDirectory = app_path('Modules/'.$this->module.'/Migrations');
+        $this->moduleConfigrationDirectory = app_path('Modules/'.$this->module.'/Configurations');
+    }
+
+    /**
+     * Publish all migration files
+     */
+    public function publishMigrations()
+    {
+        $directory = $this->moduleMigrationsDirectory;
+        if (!$this->fileSystem->exists($directory)) 
+            return false;
+
+        // Get all files in this directory.
+        $files = $this->fileSystem->files($directory);
+        if (!empty($files)) {
+            foreach($files as $file) {
+                $this->fileSystem->copy($file->getPathname(), database_path('/migrations/'.$file->getFilename()));
+            }
+        }
+        
+    }
+
+    /**
+     * Publish all seed files
+     */
+    public function publishSeeders()
+    {
+        // Target directory.
+        $directory = $this->moduleSeedsDirectory;
+
+        // Check if the directory exists.
+        if ($this->fileSystem->exists($directory)) {
+
+        // Get all files in this directory.
+        $files = $this->fileSystem->files($directory);
+            if (!empty($files)) {
+                foreach($files as $file) {
+                    $this->fileSystem->copy($file->getPathname(), database_path('/seeds/'.$file->getFilename()));
+                }
+            }
+        }
+    }
+
+    /**
+     * Publish all config files
+     */
+    public function publishConfigurationFiles()
+    {
+        // Target directory.
+        $directory = $this->moduleConfigrationDirectory;
+
+        // Check if the directory exists.
+        if ($this->fileSystem->exists($directory)) {
+
+        // Get all files in this directory.
+        $files = $this->fileSystem->files($directory);
+            if (!empty($files)) {
+                foreach($files as $file) {
+                    $this->fileSystem->copy($file->getPathname(), config_path($file->getFilename()));
+                }
+            }
+        }
+    }
+
 }
