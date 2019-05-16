@@ -3,7 +3,7 @@
     <h2 align="center">Anchor</h2>
 </p>
 
-This package will help you create an API and SPA back-end application built with laravel v 5.8 and nuxtjs 2.6 popular community packages as a base. 
+This package will help you create an SPA front-end and API back-end application built with laravel v 5.8 and nuxtjs 2.6 popular community packages as a base. 
 
 ## Version Information
  Version   | Illuminate    | Status                  | PHP Version
