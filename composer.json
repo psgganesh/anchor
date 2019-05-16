@@ -2,7 +2,7 @@
     "name": "psgganesh/anchor",
     "type": "project",
     "homepage": "https://github.com/psgganesh/anchor",
-    "description": "API back-end boilerplate with laravel v5.8",
+    "description": "API and SPA back-end boilerplate with laravel v5.8 and nuxtjs 2.6",
     "keywords": [
         "anchor",
         "project",
