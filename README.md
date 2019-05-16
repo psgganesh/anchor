@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://github.com/psgganesh/anchor"><img width="130" src="![Anchor](https://raw.githubusercontent.com/psgganesh/anchor/master/public/anchor.png)
+    <a href="https://github.com/psgganesh/anchor"><img width="130" src="https://raw.githubusercontent.com/psgganesh/anchor/master/public/anchor.png
 "></a>
 </p>
 
@@ -13,13 +13,15 @@ This package will help you create an API back-end application built with laravel
 ## Packages used
 Popular community packages used so far are
 
+- [tymon/jwt-auth](https://github.com/tymon/jwt-auth)
 - [fideloper/proxy](https://github.com/fideloper/TrustedProxy)
 - [owen-it/laravel-auditing](https://github.com/owen-it/laravel-auditing)
-- [spatie/laravel-cors](https://github.com/spatie/laravel-cors),
-- [spatie/laravel-fractal](https://github.com/spatie/laravel-fractal),
+- [spatie/laravel-cors](https://github.com/spatie/laravel-cors)
+- [spatie/laravel-fractal](https://github.com/spatie/laravel-fractal)
 - [spatie/laravel-permission](https://github.com/spatie/laravel-permission)"
-- [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar),
-- [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server),
+- [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+- [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server)
+
 
 ## Credits
 Anchor is built on the Laravel web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling; the application framework takes the pain out of development by easing common tasks used in many web projects, such as:
