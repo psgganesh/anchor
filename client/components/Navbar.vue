@@ -2,7 +2,7 @@
     <div>  
       <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
         <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand">
-          <h5 class="font-weight-normal"><img src="~assets/img/brand.svg"  width="32" height="32" /> {{ appName }}</h5>
+          <h5 class="font-weight-normal"><img src="~assets/img/brand-sm.png"  width="32" height="32" /> {{ appName }}</h5>
         </router-link>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

@@ -2,9 +2,11 @@
   <div class="container-fluid">
     <div class="row full-height">
         <div class="col-lg-5 full-height mt-180 text-align-center">
+            <img id="logo" class="img-thumbnail logo" src="~assets/img/brand-lg.png"  alt="sph" name="logo">
             <h1 class="font-weight-normal">
-                <img id="logo" class="img-thumbnail logo" src="~assets/img/brand.svg"  alt="sph" name="logo"> {{ appName }}
+                {{ appName }}
             </h1>
+            <br/>
             <form @submit.prevent="login" @keydown="form.onKeydown($event)">
               <!-- Email -->
               <div class="form-group row">

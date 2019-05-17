@@ -13,7 +13,7 @@ This package will help you create an SPA front-end and API back-end application 
 ## Packages used
 Popular community packages used so far are
 
-- [tymon/jwt-auth](https://github.com/tymon/jwt-auth)
+- [laravel/passport](https://github.com/laravel/passport)
 - [fideloper/proxy](https://github.com/fideloper/TrustedProxy)
 - [owen-it/laravel-auditing](https://github.com/owen-it/laravel-auditing)
 - [spatie/laravel-cors](https://github.com/spatie/laravel-cors)
@@ -21,6 +21,30 @@ Popular community packages used so far are
 - [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
 - [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 - [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server)
+
+## Installation
+
+``` bash
+# For laravel
+$ composer install
+$ php artisan migrate
+$ php artisan passport:keys
+
+# For creating new modules
+$ php artisan make:module <Modulename>
+
+# For publishing it's migrations / seeds / config files
+$ php artisan module:publish <Modulename>
+
+# For nuxtJS
+# install dependencies and build SPA
+$ npm install
+$ npm run build
+```
+
+> Note on the API - Over the laravel end, 
+ - We are using Repository and Module pattern. More information [On this blog post](https://www.larashout.com/how-to-use-repository-pattern-in-laravel?ref=laravelnews)
+ - To get a basic idea on how the Modules are being used, please read [this blog post](https://hackernoon.com/simple-and-complete-module-based-laravel-app-5fee7a21bf28) about modularizing your laravel apps.
 
 
 ## Credits
