@@ -6,7 +6,7 @@
         client
       </h1>
       <h2 class="subtitle">
-        My classy Nuxt.js project
+        Anchor front-end
       </h2>
       <div class="links">
         <a

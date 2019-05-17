@@ -16,7 +16,7 @@ module.exports = function () {
 
     fs.removeSync(publicDir)
 
-    fs.copySync(this.options.buildDir + '/dist/client/', publicDir)
+    fs.copySync(this.options.buildDir + '/dist/client', publicDir)
     fs.writeFileSync(publicDir + '/index.html', html)
 
     try {

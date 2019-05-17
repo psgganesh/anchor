@@ -1,0 +1,35 @@
+@import 'variables';
+
+@import "~bootswatch/dist/cosmo/_variables";
+
+@import '~bootstrap/scss/bootstrap';
+
+@import "~bootswatch/dist/cosmo/_bootswatch";
+
+@import '~sweetalert2/src/sweetalert2';
+
+@import 'elements/card';
+@import 'elements/navbar';
+@import 'elements/buttons';
+@import 'elements/transitions';
+
+.nav-link .svg-inline--fa {
+    font-size: smaller;
+}
+.mt-180{
+    margin-top: 180px;
+}
+.mt-67 {
+    margin-top: 67px;
+}
+.text-align-center {
+    text-align: center;
+}
+.empty-image-placeholder {
+    border-radius: 100%;
+    width: 100%;
+    margin-top: 150px;
+    border-style: dashed;
+    border-width: 1.5px;
+    border-color: #b7c5db;
+}

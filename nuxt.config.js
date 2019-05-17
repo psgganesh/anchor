@@ -1,24 +1,32 @@
 require('dotenv').config()
 
+const polyfills = [
+  'Promise',
+  'Object.assign',
+  'Object.values',
+  'Array.prototype.find',
+  'Array.prototype.findIndex',
+  'Array.prototype.includes',
+  'String.prototype.includes',
+  'String.prototype.startsWith',
+  'String.prototype.endsWith'
+]
+
 export default {
   mode: 'spa',
 
-  router: {
-    base: '/'
-  },
+  srcDir: 'client/',
 
-  srcDir: __dirname+'/client/',
-  
   env: {
-    apiUrl: process.env.APP_URL,
-    appName: process.env.APP_NAME,
-    appLocale: process.env.APP_LOCALE
+    apiUrl: process.env.APP_URL || 'http://localhost/api',
+    appName: process.env.APP_NAME || 'Anchor',
+    appLocale: process.env.APP_LOCALE || 'en'
   },
 
   /*
   ** Headers of the page
   */
-  head: {
+ head: {
     title: process.env.APP_NAME,
     titleTemplate: '%s - ' + process.env.APP_NAME,
     meta: [
@@ -28,45 +36,55 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: `https://cdn.polyfill.io/v2/polyfill.min.js?features=${polyfills.join(',')}` }
     ]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#004cff' },
+
+  router: {
+    base: '/',
+    middleware: ['locale', 'check-auth']
+  },
 
   /*
   ** Global CSS
   */
   css: [
+    { src: '~assets/sass/app.scss', lang: 'scss' },
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~components/global',
+    '~plugins/helloworld',
+    '~plugins/i18n',
+    '~plugins/axios',
+    '~plugins/vform',
+    '~plugins/fontawesome',
+    { src: '~plugins/bootstrap', ssr: false }
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    '@nuxtjs/router',
     '~/modules/spa'
   ],
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
 
   /*
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     /*
     ** You can extend webpack config here
     */

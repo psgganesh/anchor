@@ -2,19 +2,19 @@
 
 namespace App\Modules\Account\Models;
 
+use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
-use Tymon\JWTAuth\Contracts\JWTSubject;
 use OwenIt\Auditing\Contracts\Auditable;
 use Illuminate\Notifications\Notifiable;
-use App\Modules\Common\Traits\HasRelations;
+use App\Modules\Shared\Traits\HasRelations;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\ResetPassword as ResetPasswordNotification;
 use OwenIt\Auditing\Auditable as IsAutidable;
 
-class User extends Authenticatable implements JWTSubject, Auditable
+class User extends Authenticatable implements Auditable
 {
-    use Notifiable, SoftDeletes, HasRoles, HasRelations, IsAutidable;
+    use Notifiable, SoftDeletes, HasRoles, HasRelations, IsAutidable, HasApiTokens;
 
     /**
      * The attributes that are guarded.
@@ -65,18 +65,13 @@ class User extends Authenticatable implements JWTSubject, Auditable
     }
 
     /**
-     * @return int
+     * Find the user instance for the given username.
+     *
+     * @param  string  $username
+     * @return \App\User
      */
-    public function getJWTIdentifier()
+    public function findForPassport($username)
     {
-        return $this->getKey();
-    }
-
-    /**
-     * @return array
-     */
-    public function getJWTCustomClaims()
-    {
-        return [];
+        return $this->where('email', $username)->first();
     }
 }

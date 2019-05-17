@@ -14,24 +14,20 @@ use Illuminate\Http\Request;
 */
 Route::get('/', 'Api\v1\HomeController@index');
 
-Route::post('auth/login', function(Request $request) {
-    $cred = $request->only('email', 'password');
+Route::group(['middleware' => 'guest:api'], function () {
+    Route::post('login', 'Auth\LoginController@login')->name('apilogin');
+    Route::post('register', 'Auth\RegisterController@register');
 
-    if (auth()->attempt($cred)) {
-
-        auth()->user()->tokens()->delete();
-        $token = auth()->user()->createToken('SPA');
-
-        return response()->json([
-            'access_token' => $token->accessToken,
-        ]);
-    }
-
-    return response()->json(['Unauthorized.'], \Illuminate\Http\Response::HTTP_UNAUTHORIZED);
+    Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+    Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 });
 
-Route::group(['middleware' => 'auth:api'], function() {
-    Route::get('auth/user', function(Request $request) {
-        return auth()->user();
+Route::middleware(['auth:api'])->group(function () {
+    Route::post('logout', 'Auth\LoginController@logout');
+    Route::get('/user', function (Request $request) {
+        return $request->user();
     });
+    Route::patch('settings/profile', 'Settings\ProfileController@update');
+    Route::patch('settings/password', 'Settings\PasswordController@update');
+
 });
