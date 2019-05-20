@@ -69,6 +69,7 @@ export default {
     '~plugins/axios',
     '~plugins/vform',
     '~plugins/fontawesome',
+    '~plugins/nuxt-client-init',
     { src: '~plugins/bootstrap', ssr: false }
   ],
 

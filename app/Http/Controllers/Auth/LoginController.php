@@ -33,11 +33,12 @@ class LoginController extends Controller
             'password' => $request->password
         ];
 
-        if (auth()->attempt($credentials)) {
+        $authCheck = $this->guard()->attempt($credentials);
 
-            $token = auth()->user()->createToken('Anchor')->accessToken;
+        if ($authCheck) {
 
             return true;
+
         }
 
         return false;
@@ -53,10 +54,11 @@ class LoginController extends Controller
     {
         $this->clearLoginAttempts($request);
 
-        $token = auth()->user()->createToken('Anchor')->accessToken;
+        $username = auth()->user()->email;
+        $this->token = auth()->user()->createToken($username)->accessToken;
 
         return [
-            'token' => $token,
+            'token' => $this->token,
             'token_type' => 'bearer'
         ];
     }
