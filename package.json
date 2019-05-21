@@ -33,6 +33,10 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.9",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "lodash": "^4.17.5",
+    "resolve-url-loader": "^2.3.1",
+    "sass": "^1.15.2",
+    "laravel-mix": "^4.0.7"
   }
 }

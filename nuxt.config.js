@@ -57,6 +57,7 @@ export default {
   */
   css: [
     { src: '~assets/sass/app.scss', lang: 'scss' },
+    { src: '@fortawesome/fontawesome/styles.css', lang: 'css' }
   ],
 
   /*

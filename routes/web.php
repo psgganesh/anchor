@@ -11,4 +11,6 @@
 |
 */
 
+Route::get('/', function() { return view('welcome'); });
+
 Route::any('{all}', 'NuxtController@serveFrontend')->where('all', '^(?!api).*$');
