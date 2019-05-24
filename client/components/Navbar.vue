@@ -11,13 +11,6 @@
           <ul class="navbar-nav mr-auto">
             <locale-dropdown/>
             <li v-if="user" class="nav-item"><router-link :to="{ name: 'home' }" class="nav-link" active-class="active"><fa icon="home" class="fs-initial" /> {{ $t('home') }}</router-link></li>
-            <li v-if="user" class="nav-item"><router-link :to="{ name: 'pages' }" class="nav-link" active-class="active"><fa icon="file-word" class="fs-initial" /> {{ $t('pages') }}</router-link></li>
-            <li v-if="user" class="nav-item"><router-link :to="{ name: 'terms' }" class="nav-link" active-class="active"><fa icon="gavel" class="fs-initial" /> {{ $t('terms') }}</router-link></li>
-            <li v-if="user" class="nav-item"><router-link :to="{ name: 'rules' }" class="nav-link" active-class="active"><fa icon="cog" class="fs-initial" /> {{ $t('rules') }}</router-link></li>
-            <li v-if="user" class="nav-item"><router-link :to="{ name: 'mappings' }" class="nav-link" active-class="active"><fa icon="map-pin" class="fs-initial" /> {{ $t('mappings') }}</router-link></li>
-            <li v-if="user" class="nav-item"><router-link :to="{ name: 'customers' }" class="nav-link" active-class="active"><fa icon="address-book" class="fs-initial" /> {{ $t('customers') }}</router-link></li>
-            <li v-if="user" class="nav-item"><router-link :to="{ name: 'passcodes' }" class="nav-link" active-class="active"><fa icon="key" class="fs-initial" /> {{ $t('passcodes') }}</router-link></li>
-            <li v-if="user" class="nav-item"><router-link :to="{ name: 'events' }" class="nav-link" active-class="active"><fa icon="calendar" class="fs-initial" /> {{ $t('events') }}</router-link></li>
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
