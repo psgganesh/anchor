@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Console\Commands\AnchorPreset;
 use App\Console\Commands\ModuleBuilder;
 use App\Console\Commands\ModulePublisher;
 
@@ -16,7 +17,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         ModuleBuilder::class,
-        ModulePublisher::class
+        ModulePublisher::class,
+        AnchorPreset::class
     ];
 
     /**
