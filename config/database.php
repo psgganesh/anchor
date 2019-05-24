@@ -92,6 +92,28 @@ return [
             'prefix_indexes' => true,
         ],
 
+        /*
+        |--------------------------------------------------------------------------
+        | Heroku Clear DB Databases
+        |--------------------------------------------------------------------------
+        |
+        | ClearDB is an powerful, high-speed database-as-a-service in the cloud
+        | for your MySQL powered applications on heroku.
+        | https://devcenter.heroku.com/articles/cleardb
+        |
+        */
+
+        'heroku_cleardb' => array(
+            'driver' => 'mysql',
+            'host' => $clearDBHost,
+            'database' => $clearDBDatabase,
+            'username' => $clearDBUsername,
+            'password' => $clearDBPassword,
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+        )
+
     ],
 
     /*
@@ -142,26 +164,6 @@ return [
 
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Heroku Clear DB Databases
-    |--------------------------------------------------------------------------
-    |
-    | ClearDB is an powerful, high-speed database-as-a-service in the cloud
-    | for your MySQL powered applications on heroku.
-    | https://devcenter.heroku.com/articles/cleardb
-    |
-    */
-
-    'heroku_cleardb' => array(
-        'driver' => 'mysql',
-        'host' => $clearDBHost,
-        'database' => $clearDBDatabase,
-        'username' => $clearDBUsername,
-        'password' => $clearDBPassword,
-        'charset' => 'utf8',
-        'collation' => 'utf8_unicode_ci',
-        'prefix' => '',
-    ),
+    
 
 ];
