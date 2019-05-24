@@ -103,7 +103,7 @@ class ModuleBuilder extends Command
     }
 
     /**
-     * Build modules
+     * Build modules.
      */
     protected function __build_module()
     {
@@ -125,7 +125,7 @@ class ModuleBuilder extends Command
     }
 
     /**
-     * Create parent module directory
+     * Create parent module directory.
      */
     protected function __create_parent_directory()
     {
@@ -144,7 +144,7 @@ class ModuleBuilder extends Command
     }
 
     /**
-     * Register module in the database
+     * Register module in the database.
      */
     protected function __register_module()
     {
