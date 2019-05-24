@@ -1,12 +1,5 @@
 <?php
 
-// Heroku ClearDB support
-$clearDBUrl = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$clearDBHost = $clearDBUrl["host"];
-$clearDBUsername = $clearDBUrl["user"];
-$clearDBPassword = $clearDBUrl["pass"];
-$clearDBDatabase = substr($clearDBUrl["path"], 1);
-
 return [
 
     /*
@@ -105,10 +98,10 @@ return [
 
         'heroku_cleardb' => array(
             'driver' => 'mysql',
-            'host' => $clearDBHost,
-            'database' => $clearDBDatabase,
-            'username' => $clearDBUsername,
-            'password' => $clearDBPassword,
+            'host' => '',
+            'database' => '',
+            'username' => '',
+            'password' => '',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',

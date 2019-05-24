@@ -12,22 +12,31 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/', 'Api\v1\HomeController@index');
+Route::namespace('Api')->group(function () {
 
-Route::group(['middleware' => 'guest:api'], function () {
-    Route::post('login', 'Auth\LoginController@login')->name('apilogin');
-    Route::post('register', 'Auth\RegisterController@register');
+    /**
+     * All v1 routes
+     */
+    Route::namespace('v1')->prefix('v1')->group(function () {
 
-    Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-    Route::post('password/reset', 'Auth\ResetPasswordController@reset');
-});
+        Route::get('/', 'HomeController@index');
 
-Route::middleware(['auth:api'])->group(function () {
-    Route::post('logout', 'Auth\LoginController@logout');
-    Route::get('/user', function (Request $request) {
-        return $request->user();
+        Route::group(['middleware' => 'guest:api'], function () {
+            Route::post('login', 'Authentication\LoginController@login')->name('apilogin');
+            Route::post('register', 'Authentication\RegisterController@register');
+
+            Route::post('password/email', 'Authentication\ForgotPasswordController@sendResetLinkEmail');
+            Route::post('password/reset', 'Authentication\ResetPasswordController@reset');
+        });
+
+        Route::middleware(['auth:api'])->group(function () {
+            Route::post('logout', 'Authentication\LoginController@logout');
+            Route::get('/user', function (Request $request) {
+                return $request->user();
+            });
+            
+        });
+
     });
-    Route::patch('settings/profile', 'Settings\ProfileController@update');
-    Route::patch('settings/password', 'Settings\PasswordController@update');
 
 });

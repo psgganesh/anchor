@@ -18,7 +18,7 @@ export default {
   srcDir: 'client/',
 
   env: {
-    apiUrl: process.env.APP_URL || 'http://localhost/api',
+    apiUrl: process.env.APP_URL +'/'+process.env.API_VERSION || 'http://localhost/api',
     appName: process.env.APP_NAME || 'Anchor',
     appLocale: process.env.APP_LOCALE || 'en'
   },

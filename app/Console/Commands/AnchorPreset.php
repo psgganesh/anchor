@@ -2,10 +2,9 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use File;
+use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
-use Zip;
 
 class AnchorPreset extends Command
 {
@@ -46,11 +45,12 @@ class AnchorPreset extends Command
         {
             case 'spa':
                 if ($this->confirm('This will create complete front-end assets, do you wish to continue?'))
-                    $this->_build_scaffolds();
+                    $this->__build_scaffolds();
+                $this->warn('Method not yet implemented!');
                 break;
             case 'api':
                 if ($this->confirm('This will remove all front-end assets, do you wish to continue?'))
-                    $this->_destroy_scaffolds();
+                    $this->__destroy_scaffolds();
                 break;
             default:
                 $this->line('Preset for `'.$mode.'` is undefined!');
@@ -61,7 +61,7 @@ class AnchorPreset extends Command
     /**
      * Removes front-end folders
      */
-    protected function _destroy_scaffolds()
+    protected function __destroy_scaffolds()
     {
         try {
             File::removeDirectory(public_path('client'));
@@ -79,13 +79,14 @@ class AnchorPreset extends Command
     }
 
     /**
-     * 
+     * Re-create front-end folders and package.json, 
+     * webpack, nuxt.config etc...
      */
-    protected function _build_scaffolds()
+    protected function __build_scaffolds()
     {
         try {
-            Zip::extract(public_path('public/frontend.zip'));
-            $this->info('Added /client, package.json, webpack.mix.js nuxt.config.js files');
+            // TODO: Add functions to re-create the nuxt app
+            //$this->info('Added /client, package.json, webpack.mix.js nuxt.config.js files');
         } catch(\Exception $exception) {
             Log::error($exception->getMessage());
         }

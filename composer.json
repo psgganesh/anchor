@@ -31,8 +31,7 @@
         "owen-it/laravel-auditing": "^9.2",
         "spatie/laravel-cors": "^1.5",
         "spatie/laravel-fractal": "^5.5",
-        "spatie/laravel-permission": "^2.37",
-        "zanysoft/laravel-zip": "^1.0"
+        "spatie/laravel-permission": "^2.37"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

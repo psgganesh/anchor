@@ -47,14 +47,14 @@ class ModulePublisher extends Command
      *
      * @var string
      */
-    protected $signature = 'module:publish {name}';
+    protected $signature = 'anchor:publish {name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Publish files of the new module';
+    protected $description = 'Publish files for an existing module';
 
     /**
      * Create a new command instance.
