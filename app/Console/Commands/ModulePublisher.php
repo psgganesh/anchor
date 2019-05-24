@@ -47,7 +47,8 @@ class ModulePublisher extends Command
      *
      * @var string
      */
-    protected $signature = 'anchor:publish {name}';
+    protected $signature = 'anchor:publish 
+                            {name : Name of the module to publish assets for.}';
 
     /**
      * The console command description.
