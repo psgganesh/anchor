@@ -31,10 +31,11 @@ Route::namespace('Api')->group(function () {
 
         Route::middleware(['auth:api'])->group(function () {
             Route::post('logout', 'Authentication\LoginController@logout');
-            Route::get('/user', function (Request $request) {
+            Route::get('user', function (Request $request) {
                 return $request->user();
             });
-            
+            Route::patch('settings/profile', 'Settings\ProfileController@update');
+            Route::patch('settings/password', 'Settings\PasswordController@update');
         });
 
     });

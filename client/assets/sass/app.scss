@@ -1,9 +1,11 @@
+
+// Google fonts
+@import url('https://fonts.googleapis.com/css?family=Molengo&display=swap');
+
 @import 'variables';
 
 @import "~bootswatch/dist/cosmo/_variables";
-
 @import '~bootstrap/scss/bootstrap';
-
 @import "~bootswatch/dist/cosmo/_bootswatch";
 
 @import '~sweetalert2/src/sweetalert2';
@@ -13,6 +15,12 @@
 @import 'elements/buttons';
 @import 'elements/transitions';
 
+body{
+    font-family: 'Molengo', sans-serif;
+}
+.breadcrumb {
+    background-color: #f7f9fb;
+}
 .nav-link .svg-inline--fa {
     font-size: smaller;
 }
@@ -26,10 +34,7 @@
     text-align: center;
 }
 .empty-image-placeholder {
-    border-radius: 100%;
-    width: 100%;
+    width: 30%;
     margin-top: 150px;
-    border-style: dashed;
-    border-width: 1.5px;
-    border-color: #b7c5db;
+    margin-bottom: 20px;
 }

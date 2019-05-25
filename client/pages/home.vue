@@ -1,19 +1,14 @@
 <template>
   <div>
+    <breadcrumbs :name="$t('home')" />
     <div class="row">
       <div class="col-lg-12">
-        <breadcrumbs :name="$t('home')">
-        </breadcrumbs>
+        <div class="text-align-center">
+            <img src="~assets/img/undraw_Data_points_ubvs.svg" class="empty-image-placeholder" />
+            <h5 class="text-muted">Add analytics, custom vue components; go ahead, create something awesome !</h5>
+        </div>
       </div>
     </div>
-    <div v-if="viewHasData">
-        <h5>Dashboard has data</h5>
-    </div>
-    <div v-else class="offset-lg-4 col-lg-4 text-align-center">
-        <img src="~assets/img/empty.png" class="empty-image-placeholder" />
-        <h6><b class="text-muted">There is no data on this page, to display yet!</b></h6>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -22,13 +17,11 @@ import breadcrumbs from "~/components/Breadcrumbs.vue"
 export default {
   middleware: 'auth',
   data: () => ({
-    viewHasData: true
-  }),
 
+  }),
   head () {
     return { title: this.$t('home') }
   },
-
   components: {
     breadcrumbs
   }

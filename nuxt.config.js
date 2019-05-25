@@ -45,7 +45,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#004cff' },
+  loading: { color: '#e9311d' },
 
   router: {
     base: '/',

@@ -88,8 +88,8 @@ export default {
   font-weight: 400;
 }
 li.nav-item {
-    padding-left: 5px;
-    padding-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .user-dropdown {
   background: #fff;
@@ -114,6 +114,6 @@ li.nav-item {
   font-size: initial;
 }
 .navbar-light .navbar-nav .nav-link.active {
-  color: #2680e3;
+  color: #e9311d;
 }
 </style>
