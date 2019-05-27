@@ -9,9 +9,11 @@
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import breadcrumbs from "~/components/Breadcrumbs.vue"
 
 export default {

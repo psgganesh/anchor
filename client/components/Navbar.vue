@@ -73,11 +73,16 @@ export default {
 
   methods: {
     async logout () {
-      // Log out the user.
-      await this.$store.dispatch('auth/logout')
-
-      // Redirect to login.
-      this.$router.push({ name: 'login' })
+      try {
+        // Log out the user.
+        await this.$store.dispatch('auth/logout')
+        console.log('after await dispatch');
+        // Redirect to login.
+        this.$router.push({ name: 'login' });
+        console.log('Reached login page');
+      } catch(e) {
+        console.log(e.message)
+      }
     }
   }
 }

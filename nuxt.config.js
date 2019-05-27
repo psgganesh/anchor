@@ -14,7 +14,7 @@ const polyfills = [
 
 export default {
   mode: 'spa',
-
+  dev: true,
   srcDir: 'client/',
 
   env: {

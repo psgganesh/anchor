@@ -75,8 +75,8 @@ export default {
 
   data: () => ({
     form: new Form({
-      email: '',
-      password: ''
+      email: 'psgganesh@gmail.com',
+      password: 'secret'
     }),
     remember: false,
     appName: process.env.appName
