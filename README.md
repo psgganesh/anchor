@@ -6,6 +6,8 @@
 This package will help you create an SPA front-end and API back-end application built with laravel v 5.8 and nuxtjs 2.6 popular community packages as a base. 
 
 ## Version Information
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_shield)
+
  Version   | Illuminate    | Status                  | PHP Version
 :----------|:--------------|:------------------------|:------------
  1.0       | 5.8.x - 5.x.x | Active support :rocket: | >= 7.1.3
@@ -60,3 +62,6 @@ Anchor is built on the Laravel web application framework with expressive, elegan
 
 ## License
 The **Anchor** project is open source software licensed under the [MIT LICENSE](LICENSE.md).
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_large)
