@@ -64,15 +64,15 @@ export const actions = {
 
   async logout ({ commit }) {
     try {
+
       await axios.post('/logout')
-      console.log('after awaiting for logout');
+
     } catch (e) { }
 
     Cookies.remove('token')
 
     commit('LOGOUT')
 
-    console.log('reached end');
   },
 
   async fetchOauthUrl (ctx, { provider }) {
