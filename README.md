@@ -61,7 +61,7 @@ Anchor is built on the Laravel web application framework with expressive, elegan
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 ## License
-The **Anchor** project is open source software licensed under the [MIT LICENSE](LICENSE.md).
+The **Anchor** project is open source software licensed under the [GNU Lesser General Public License v 3.0](LICENSE).
 
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_large)
