@@ -63,5 +63,4 @@ Anchor is built on the Laravel web application framework with expressive, elegan
 ## License
 The **Anchor** project is open source software licensed under the [GNU Lesser General Public License v 3.0](LICENSE).
 
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_large)
