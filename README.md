@@ -5,14 +5,14 @@
 
 This package will help you create an SPA front-end and API back-end application built with laravel v 5.8 and nuxtjs 2.6 popular community packages as a base. 
 
-## Version Information
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_small)
+## Version Information ✨
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_shield)
 
  Version   | Illuminate    | Status                  | PHP Version
 :----------|:--------------|:------------------------|:------------
  1.0       | 5.8.x - 5.x.x | Active support :rocket: | >= 7.1.3
 
-## Packages used
+## Packages used for API 📦📦
 Popular community packages used so far are
 
 - [laravel/passport](https://github.com/laravel/passport)
@@ -24,22 +24,49 @@ Popular community packages used so far are
 - [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 - [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server)
 
-## Installation
+## Packages used for Front-end 📦📦
 
+- nuxt- v2.4.0
+- axios- v0.18.0
+- @nuxtjs/router- v1.0.1
+- bootstrap- v4.1.1
+- bootswatch- v4.3.1
+- dotenv- v5.0.1
+- font-awesome- v4.7.0
+- jquery- v3.4.0
+- js-cookie- v2.2.0
+- sweetalert2- v7.19.3
+- vform- v1.0.0
+- vue-i18n- v7.6.0
+
+
+## Installation  🎉
+
+> Dependency 
 ``` bash
 # For laravel
 $ composer install
 $ php artisan migrate
+$ php artisan passport:install
+```
+
+### For production deployment of passport - please check laravel documentation for below command
+```bash
 $ php artisan passport:keys
+```
 
-# For creating new modules
+### For creating new modules
+```bash
 $ php artisan make:module <Modulename>
+```
 
-# For publishing it's migrations / seeds / config files
+### For publishing it's migrations / seeds / config files
+```bash
 $ php artisan module:publish <Modulename>
+```
 
-# For nuxtJS
-# install dependencies and build SPA
+### For nuxtJS - install dependencies and build SPA
+```bash
 $ npm install
 $ npm run build
 ```
@@ -49,18 +76,17 @@ $ npm run build
  - To get a basic idea on how the Modules are being used, please read [this blog post](https://hackernoon.com/simple-and-complete-module-based-laravel-app-5fee7a21bf28) about modularizing your laravel apps.
 
 
-## Credits
-Anchor is built on the Laravel web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling; the application framework takes the pain out of development by easing common tasks used in many web projects, such as:
+## Credits 🙌🙌🙌
+Anchor is built on the Laravel web application framework and nuxtJS; this project boilerplate would not be possible without contributions from 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Taylor Otwell](https://github.com/taylorotwell) - For laravel framework
+- [NuxtJS Contributors](https://github.com/nuxt/nuxt.js)
+- [Spatie](https://github.com/spatie) - For all the packages till now 
+- [Cretu Eusebiu](https://github.com/cretueusebiu) - For reference on nuxt js integration of nuxt js 1.4.0
+- [Larashout](https://www.larashout.com/how-to-use-repository-pattern-in-laravel) - For laravel repository pattern article
+- [Marco Aurélio Deleu](https://hackernoon.com/simple-and-complete-module-based-laravel-app-5fee7a21bf28) - Simple component based dev. blog post
 
-## License
+## License 📜
 The **Anchor** project is open source software licensed under the [GNU Lesser General Public License v 3.0](LICENSE).
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_large)
