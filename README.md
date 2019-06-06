@@ -6,7 +6,7 @@
 This package will help you create an SPA front-end and API back-end application built with laravel v 5.8 and nuxtjs 2.6 popular community packages as a base. 
 
 ## Version Information
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_small))
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_small)
 
  Version   | Illuminate    | Status                  | PHP Version
 :----------|:--------------|:------------------------|:------------
