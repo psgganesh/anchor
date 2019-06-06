@@ -12,7 +12,7 @@ This package will help you create an SPA front-end and API back-end application 
 :----------|:--------------|:------------------------|:------------
  1.0       | 5.8.x - 5.x.x | Active support :rocket: | >= 7.1.3
 
-## Packages used for API 📦📦
+## Packages used for API 📦
 Popular community packages used so far are
 
 - [laravel/passport](https://github.com/laravel/passport)
@@ -24,7 +24,7 @@ Popular community packages used so far are
 - [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 - [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server)
 
-## Packages used for Front-end 📦📦
+## Packages used for Front-end 📦
 
 - nuxt- v2.4.0
 - axios- v0.18.0
@@ -76,7 +76,7 @@ $ npm run build
  - To get a basic idea on how the Modules are being used, please read [this blog post](https://hackernoon.com/simple-and-complete-module-based-laravel-app-5fee7a21bf28) about modularizing your laravel apps.
 
 
-## Credits 🙌🙌🙌
+## Credits 🙌
 Anchor is built on the Laravel web application framework and nuxtJS; this project boilerplate would not be possible without contributions from 
 
 - [Taylor Otwell](https://github.com/taylorotwell) - For laravel framework
