@@ -8,6 +8,10 @@ This package will help you create an SPA front-end and API back-end application 
 ## Version Information ✨
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_shield)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/049d71dd3aab4b3c8b3674c5d3aa8905)](https://www.codacy.com/app/psgganesh/anchor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=psgganesh/anchor&amp;utm_campaign=Badge_Grade)
+
+
+
  Version   | Illuminate    | Status                  | PHP Version
 :----------|:--------------|:------------------------|:------------
  1.0       | 5.8.x - 5.x.x | Active support :rocket: | >= 7.1.3
