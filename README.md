@@ -87,6 +87,4 @@ Anchor is built on the Laravel web application framework and nuxtJS; this projec
 - [Marco Aurélio Deleu](https://hackernoon.com/simple-and-complete-module-based-laravel-app-5fee7a21bf28) - Simple component based dev. blog post
 
 ## License 📜
-The **Anchor** project is open source software licensed under the [GNU Lesser General Public License v 3.0](LICENSE).
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_large)
+The **Anchor** project is open source software licensed under the [MIT License](LICENSE).
