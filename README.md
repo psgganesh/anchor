@@ -25,7 +25,6 @@ Popular community packages used so far are
 - [spatie/laravel-fractal](https://github.com/spatie/laravel-fractal)
 - [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
 - [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
-- [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server)
 
 ## Packages used for Front-end 📦
 
