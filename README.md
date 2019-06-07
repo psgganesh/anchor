@@ -91,5 +91,5 @@ Anchor is built on the Laravel web application framework and nuxtJS; this projec
 ## License 📜
 The **Anchor** project is open source software licensed under the [MIT License](LICENSE).
 
-## Pull Requests and Contributions 🙏
-> Always open for improvements
+## Pull Requests and code contributors 🙏
+> Always open for improvements and code contributors
