@@ -7,6 +7,9 @@ This package will help you create an SPA front-end and API back-end application 
 
 ## Version Information ✨
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsgganesh%2Fanchor?ref=badge_shield)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/049d71dd3aab4b3c8b3674c5d3aa8905)](https://www.codacy.com/app/psgganesh/anchor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=psgganesh/anchor&amp;utm_campaign=Badge_Grade)
+
+
 
  Version   | Illuminate    | Status                  | PHP Version
 :----------|:--------------|:------------------------|:------------
@@ -22,7 +25,6 @@ Popular community packages used so far are
 - [spatie/laravel-fractal](https://github.com/spatie/laravel-fractal)
 - [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
 - [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
-- [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server)
 
 ## Packages used for Front-end 📦
 
@@ -88,3 +90,6 @@ Anchor is built on the Laravel web application framework and nuxtJS; this projec
 
 ## License 📜
 The **Anchor** project is open source software licensed under the [MIT License](LICENSE).
+
+## Pull Requests and code contributors 🙏
+> Always open for improvements and code contributors
