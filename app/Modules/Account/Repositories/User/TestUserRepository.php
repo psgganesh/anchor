@@ -6,13 +6,22 @@ use App\Modules\Account\Repositories\User\UserRepository;
 
 class TestUserRepository extends UserRepository
 {
-    public function getAllUsers()
+    public function find($id)
     {
-        return [
-            (object)[
-                'name' => 'Administrator',
-                'email' => 'admin@sph-events.test'
-            ]
-        ];
+    }
+    public function index()
+    {
+    }
+    public function show($id)
+    {
+    }
+    public function store($request)
+    {
+    }
+    public function update($request, $id)
+    {
+    }
+    public function destroy($id)
+    {
     }
 }

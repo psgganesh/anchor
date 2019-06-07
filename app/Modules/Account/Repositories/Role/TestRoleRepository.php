@@ -6,13 +6,22 @@ use App\Modules\Account\Repositories\Role\RoleRepository;
 
 class TestRoleRepository extends RoleRepository
 {
-    public function getAllRoles()
+    public function find($id)
     {
-        return [
-            (object)[
-                'name' => "admin",
-                'guard_name' => "web"
-            ]
-        ];
+    }
+    public function index()
+    {
+    }
+    public function show($id)
+    {
+    }
+    public function store($request)
+    {
+    }
+    public function update($request, $id)
+    {
+    }
+    public function destroy($id)
+    {
     }
 }

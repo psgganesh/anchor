@@ -2,7 +2,9 @@
 
 namespace App\Modules\Account\Repositories\Role;
 
-interface RoleRepositoryInterface
+use App\Modules\Shared\Interfaces\ApiInterface;
+
+interface RoleRepositoryInterface extends ApiInterface
 {
-    public function getAllRoles();
+    // Additional methods
 }

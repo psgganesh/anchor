@@ -2,7 +2,9 @@
 
 namespace App\Modules\Account\Repositories\Permission;
 
-interface PermissionRepositoryInterface
+use App\Modules\Shared\Interfaces\ApiInterface;
+
+interface PermissionRepositoryInterface extends ApiInterface
 {
-    public function getAllPermissions();
+    // Additional methods
 }

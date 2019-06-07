@@ -2,7 +2,9 @@
 
 namespace App\Modules\Account\Repositories\User;
 
-interface UserRepositoryInterface
+use App\Modules\Shared\Interfaces\ApiInterface;
+
+interface UserRepositoryInterface extends ApiInterface
 {
-    public function getAllUsers();
+    // Additional methods
 }

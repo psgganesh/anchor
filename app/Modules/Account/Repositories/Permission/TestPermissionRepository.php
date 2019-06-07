@@ -6,13 +6,22 @@ use App\Modules\Account\Repositories\Permission\PermissionRepository;
 
 class TestPermissionRepository extends PermissionRepository
 {
-    public function getAllPermissions()
+    public function find($id)
     {
-        return [
-            (object)[
-                'name' => "view_users",
-                'guard_name' => "web"
-            ]
-        ];
+    }
+    public function index()
+    {
+    }
+    public function show($id)
+    {
+    }
+    public function store($request)
+    {
+    }
+    public function update($request, $id)
+    {
+    }
+    public function destroy($id)
+    {
     }
 }
