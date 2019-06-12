@@ -79,9 +79,9 @@
                 </div>
             @endif
             <div class="content">
-                <img src="{{ asset('anchor-90.png') }}" alt="Anchor" />
+                <img src="{{ asset('anchor-90.png') }}" alt="{{ env('APP_NAME') }}" />
                 <div class="title m-b-md">
-                    Anchor
+                    {{ env('APP_NAME') }}
                 </div>
             </div>
         </div>
