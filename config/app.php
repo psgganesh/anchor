@@ -54,8 +54,6 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'client_url' => env('CLIENT_URL', 'http://localhost:3000'),
-
     'api_version' => env('API_VERSION', 'v1'),
 
     'asset_url' => env('ASSET_URL', null),

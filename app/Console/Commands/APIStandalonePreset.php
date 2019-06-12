@@ -6,7 +6,7 @@ use File;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
 
-class AnchorPreset extends Command
+class APIStandalonePreset extends Command
 {
 
     /**
@@ -14,14 +14,14 @@ class AnchorPreset extends Command
      *
      * @var string
      */
-    protected $signature = 'anchor:preset {mode}';
+    protected $signature = 'anchor:api:standalone';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Scaffold things only based on need.';
+    protected $description = 'Use this mode, if you do not need laravel to render view files.';
 
     /**
      * Create a new command instance.
@@ -39,23 +39,11 @@ class AnchorPreset extends Command
      */
     public function handle()
     {
-        $mode = $this->argument('mode');
-
-        switch($mode) 
-        {
-            case 'spa':
-                if ($this->confirm('This will create complete front-end assets, do you wish to continue?'))
-                    $this->__build_scaffolds();
-                $this->warn('Method not yet implemented!');
-                break;
-            case 'api':
-                if ($this->confirm('This will remove all front-end assets, do you wish to continue?'))
-                    $this->__destroy_scaffolds();
-                break;
-            default:
-                $this->line('Preset for `'.$mode.'` is undefined!');
-                $this->comment('Nothing to do!');
+        if ($this->confirm('This will remove all front-end assets, do you wish to continue?')) {
+            $this->__destroy_scaffolds();
+            $this->line('Laravel application is now only used as a standalone API server');
         }
+
     }
 
     /**
@@ -73,20 +61,6 @@ class AnchorPreset extends Command
             File::removeDirectory(public_path('public/_nuxt'));
             $this->info('Removed /client, /node_modules, .nuxt folders');
             $this->info('Removed package.json, package-lock.json, webpack.mix.js, nuxt.config.js files');
-        } catch(\Exception $exception) {
-            Log::error($exception->getMessage());
-        }
-    }
-
-    /**
-     * Re-create front-end folders and package.json, 
-     * webpack, nuxt.config etc...
-     */
-    protected function __build_scaffolds()
-    {
-        try {
-            // TODO: Add functions to re-create the nuxt app
-            //$this->info('Added /client, package.json, webpack.mix.js nuxt.config.js files');
         } catch(\Exception $exception) {
             Log::error($exception->getMessage());
         }
