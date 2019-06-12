@@ -26,8 +26,7 @@ const routes = [
     component: Settings,
     children: [
       { path: '', redirect: { name: 'settings.profile' } },
-      { path: 'profile', name: 'settings.profile', component: SettingsProfile },
-      { path: 'password', name: 'settings.password', component: SettingsPassword }
+      { path: 'profile', name: 'settings.profile', component: SettingsProfile }
     ] 
   }
 ]
