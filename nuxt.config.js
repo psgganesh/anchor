@@ -57,7 +57,8 @@ export default {
   */
   css: [
     { src: '~assets/sass/app.scss', lang: 'scss' },
-    { src: '@fortawesome/fontawesome/styles.css', lang: 'css' }
+    { src: '@fortawesome/fontawesome/styles.css', lang: 'css' },
+    { src: '@icon/dashicons/dashicons.css', lang: 'css' }
   ],
 
   /*
