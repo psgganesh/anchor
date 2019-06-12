@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function() { return view('welcome'); });
-
+Route::get('/login', 'NuxtController@serveFrontend')->name('login');
+Route::get('/register', 'NuxtController@serveFrontend')->name('register');
 Route::any('{all}', 'NuxtController@serveFrontend')->where('all', '^(?!api).*$');
