@@ -1,11 +1,6 @@
 <template>
-  <div>
-    <div class="row">
-        <div class="col-lg-12">
-          <breadcrumbs :name="$t('settings')">
-          </breadcrumbs>
-        </div>
-    </div>
+  <div class="col-lg-12 p-0">
+    <breadcrumbs :name="$t('pages')"></breadcrumbs>
     <div class="row">
       <div class="col-md-2">
         <card :title="$t('settings')" class="settings-card">
@@ -46,11 +41,6 @@ export default {
           icon: 'user',
           name: this.$t('profile'),
           route: 'settings.profile'
-        },
-        {
-          icon: 'lock',
-          name: this.$t('password'),
-          route: 'settings.password'
         }
       ]
     }
@@ -61,5 +51,8 @@ export default {
 <style>
 .settings-card .card-body {
   padding: 0;
+}
+.nav-pills .nav-link.active {
+  background: #eb412f;
 }
 </style>

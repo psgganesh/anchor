@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\v1;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Api\ApiController;
 
 class HomeController extends ApiController
@@ -13,12 +14,16 @@ class HomeController extends ApiController
      */
     public function index()
     {
-        $data = [
-            'encryption_key' => (config('app.key'))? 'generated':'empty',
-            'api_version' => config('app.api_version'),
-            'dated' => today()->toDateString()
-        ];
+        return file_get_contents(public_path('docs/index.html'));
+    }
 
-        return $this->respond($data, 200, "Welcome");
+    /**
+     * Get the authenticated user
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function user(Request $request)
+    {
+        return $request->user();
     }
 }
