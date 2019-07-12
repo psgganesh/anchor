@@ -39,7 +39,7 @@ export default {
       return [
         {
           icon: 'user',
-          name: this.$t('profile'),
+          name: this.$t('settings_module.preferences.profile'),
           route: 'settings.profile'
         }
       ]

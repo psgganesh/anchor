@@ -31,14 +31,18 @@
   "new_password": "New Password",
   "login_with": "Login with",
   "register_with": "Register with",
-  "pages": "Pages",
-  "terms": "Terms",
-  "rules": "Rules",
-  "mappings": "Mappings",
-  "customers": "Customers",
-  "passcodes": "Passcodes",
-  "events": "Events",
-  "preferences": "Preferences",
-  "productfamilies": "Publications",
-  "serviceflags": "Entitlements"
+  
+  "settings_module": {
+    "preferences" : {
+      "profile": "Profile"
+    },
+    "authorization": {
+      "user": "User",
+      "user_plural": "Users",
+      "role": "Role",
+      "role_plural": "Roles",
+      "permission": "Permission",
+      "permission_plural": "Permissions"
+    }
+  }
 }
